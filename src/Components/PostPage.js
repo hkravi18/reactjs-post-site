@@ -11,8 +11,9 @@ const PostPage = () => {
     const postList = posts.filter(post => post.id !== id);
     try {
         await api.delete(`/posts/${id}`);
+        console.log("Deleted post");
         setPosts(postList); 
-        navigate("/");
+        navigate('/');
     } catch (err) {
       console.log(`Error: ${err.message}`);
     }
