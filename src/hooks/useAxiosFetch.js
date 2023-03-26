@@ -16,7 +16,7 @@ const useAxiosFetch = (dataUrl) => {
                 const response = await axios.get(url, {
                     cancelToken: source.token
                 });
-                console.log(response.data);
+                //console.log(response.data);
                 if (isMounted) {
                     setData(response.data);
                     setFetchError(null);

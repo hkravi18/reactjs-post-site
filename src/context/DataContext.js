@@ -9,7 +9,7 @@ export const DataProvider = ({ children }) => {
   const [search, setSearch] = useState("");
   const [searchList, setSearchList] = useState([]);
 
-  const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
+  const { data, fetchError, isLoading } = useAxiosFetch('https://postsiteapi.onrender.com/posts');
 
   useEffect(() => {
       setPosts(data);  
